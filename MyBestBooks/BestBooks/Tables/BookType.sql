@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[BookType]
+(
+	[BookTypeId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Name] VARCHAR(40),
+	[Detail] VARCHAR(200)
+)
