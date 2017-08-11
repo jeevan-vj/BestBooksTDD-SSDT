@@ -2,7 +2,7 @@
 
 A Visual Studio SSDT (SQL Server Data Tools) Sample to show how tSQLt is used to implement TDD (Test-Driven Development). 
 
-![Screenshot](https://github.com/haroonashraf/BestBooksTDD-SSDT/BestBooksTDD-SSDT-screenshot.png)
+![Screenshot](https://github.com/haroonashraf/BestBooksTDD-SSDT/blob/master/BestBooksTDD-SSDT-screenshot.png)
 
 ## Install
 
@@ -18,7 +18,9 @@ A Visual Studio SSDT (SQL Server Data Tools) Sample to show how tSQLt is used to
 
 What to do if my automated tSQLt unit tests do not run when I debug my solution?  
 
-Please make sure that you have selected "Multiple startup projects" under Startup Project Properties in Solution settings ![Screenshot] (https://github.com/haroonashraf/BestBooksTDD-SSDT/BestBooksTDD-SSDT-setup.png)
+Please make sure that you have selected "Multiple startup projects" under Startup Project Properties in Solution settings as shown below:
+
+![Screenshot](https://github.com/haroonashraf/BestBooksTDD-SSDT/blob/master/BestBooksTDD-SSDT-Setup.png)
 
 ## Contributing
 
