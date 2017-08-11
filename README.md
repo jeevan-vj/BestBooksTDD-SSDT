@@ -24,7 +24,7 @@ Please make sure that you have selected "Multiple startup projects" under Startu
 
 ## Contributing
 
-If you'd like to contribute to this Project, please read the [contributing guidelines](./.github/CONTRIBUTING.md).
+If you'd like to contribute to this Project, please feel free to share your thoughts.
 
 ## License
 
