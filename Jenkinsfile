@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat "\"${tool 'MSBuild'}\" BMyBestBooks/MyBestBooks.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                bat "\"${tool 'DefaultMSBuild'}\" BMyBestBooks/MyBestBooks.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
         stage('ps step'){
