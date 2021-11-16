@@ -10,7 +10,7 @@ pipeline {
         stage('Build using PS'){
             steps{
                  powershell 'Write-Host "Hello Jeevan from PS"'
-                 powershell './BuildSolution.ps1"'
+                 powershell '"./BuildSolution.ps1"'
             }
         }
         stage('ps step'){
