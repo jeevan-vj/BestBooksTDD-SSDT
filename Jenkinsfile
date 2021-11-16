@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                bat 'nuget restore BMyBestBooks/MyBestBooks.sln'
             }
         }
         stage('ps step'){
