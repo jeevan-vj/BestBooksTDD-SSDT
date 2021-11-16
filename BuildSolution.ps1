@@ -1,17 +1,13 @@
-$msbuildPath = Join-Path ${env:ProgramFiles(x86)}  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+$msbuildPath = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+
+Write-Host "Testing path: " $msbuildPath
+
 
 Write-Host "Testing path: " $msbuildPath
 
 if(!(Test-Path $msbuildPath)){
 
-    $msbuildPath = Join-Path ${env:ProgramFiles(x86)}  "Msbuild\15.0\bin\msbuild"
-}
-
-Write-Host "Testing path: " $msbuildPath
-
-if(!(Test-Path $msbuildPath)){
-
-    Write-Host "Can't find msbuild?? make sur eyou installed visual studio 2015 or 2017"  -BackgroundColor $backColour -ForegroundColor $foreColour
+    Write-Host "Can't find msbuild?? make sur eyou installed visual studio 2015 or 2017"  
     Exit(1)
 }
 
