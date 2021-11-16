@@ -1,4 +1,4 @@
-$msbuildPath = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+$msbuildPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\msbuild.exe"
 
 Write-Host "Testing path: " $msbuildPath
 
@@ -15,9 +15,8 @@ Write-Host "Using path: " $msbuildPath
 
 $root = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
 $root
-cd $root
-cd ..
-& $msbuildPath .\MyBestBooks\MyBestBooks.sln
+
+& $msbuildPath .\MyBestBooks\\MyBestBooks.sln
 if(!($?) -or $lastExitCode -ne 0){
     exit(1)
 }
