@@ -7,6 +7,11 @@ pipeline {
                 echo 'Building..'
             }
         }
+        stage('ps step'){
+            steps{
+                powershell 'Write-Host "Hello Jeevan from PS"'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
