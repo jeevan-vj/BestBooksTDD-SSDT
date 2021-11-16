@@ -11,7 +11,7 @@ pipeline {
             steps{
                  powershell 'Write-Host "Hello Jeevan from PS"'
                  powershell(script: """
-               Write-Host "jjjjjj"
+              & ./BuildSolution.ps1
             """)
             }
         }
