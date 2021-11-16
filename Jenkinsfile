@@ -5,8 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                 def msbuild = tool name: 'DefaultMSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
-                 bat "${msbuild} BMyBestBooks/MyBestBooks.sln.sln"
+                 script {
+                          def msbuild = tool name: 'MSBuild', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+                          bat "${msbuild} MyBestBooks/MyBestBooks.sln"
+                         } 
             }
         }
         stage('ps step'){
