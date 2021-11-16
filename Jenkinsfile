@@ -12,9 +12,6 @@ pipeline {
                 pwsh(script: './BuildSolution.ps1')
             }
         }
-        stage('Build') {
-             steps{ tool name: 'MsBuild', type: 'msbuild' bat ""${tool 'MsBuild'}"MyBestBooks/MyBestBooks.sln /t:Rebuild /p:Configuration=Release" }
-        }
         stage('ps step'){
             steps{
                 powershell 'Write-Host "Hello Jeevan from PS"'
