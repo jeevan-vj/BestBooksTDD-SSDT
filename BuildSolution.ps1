@@ -34,6 +34,6 @@ if(!(Test-Path $buildOutPutDacpacFilePath)){
     Exit(1)
 }
 
-& $SqlPackageLocation2 /action:Publish  /SourceFile:$buildOutPutDacpacFilePath /TargetDatabaseName:BestBooks /TargetServerName:”localhost” /tu:sa /tp:123 
+& $SqlPackageLocation2 /action:Publish  /SourceFile:$buildOutPutDacpacFilePath /TargetDatabaseName:BestBooks /TargetServerName:'localhost' /tu:sa /tp:123 
 
-Write-Host "Successfully deployed"
+#Write-Host "Successfully deployed"
