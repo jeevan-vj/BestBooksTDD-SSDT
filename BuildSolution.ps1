@@ -1,6 +1,6 @@
 $root = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
 $msBuildRootDir = "$root\MSBuild"
-Write-Host $root
+Write-Host "Root Path: " $root
 
 #$msbuildPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\msbuild.exe"
 
@@ -34,6 +34,6 @@ if(!(Test-Path $buildOutPutDacpacFilePath)){
     Exit(1)
 }
 
-& $SqlPackageLocation2 /action:Publish  /SourceFile:$buildOutPutDacpacFilePath /TargetDatabaseName:BestBooks /TargetServerName:'localhost' /tu:sa /tp:123 
+#& $SqlPackageLocation2 /action:Publish  /SourceFile:$buildOutPutDacpacFilePath /TargetDatabaseName:BestBooks /TargetServerName:'localhost' /tu:sa /tp:123 
 
 #Write-Host "Successfully deployed"
