@@ -5,6 +5,13 @@ Write-Host "Root Path: " $root
 $msbuildPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\msbuild.exe"
 
 
+if(!(Test-Path ./nuget.exe)){
+   wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile ./nuget.exe
+}
+./nuget install Microsoft.Data.Tools.Msbuild -o  $msBuildRootDir
+
+$msbuildPath2 = Get-Childitem –Path $msBuildRootDir  -Include 'msbuild.exe'  -File -Recurse | Select-Object -First 1
+Write-Host $msbuildPath2
 
 Write-Host "Testing path: " $msbuildPath
 
