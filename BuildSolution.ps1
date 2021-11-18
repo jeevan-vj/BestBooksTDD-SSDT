@@ -1,7 +1,7 @@
+$root = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
+Write-Host $root
+
 $msbuildPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\msbuild.exe"
-
-Write-Host "Testing path: " $msbuildPath
-
 
 Write-Host "Testing path: " $msbuildPath
 
