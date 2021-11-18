@@ -13,10 +13,13 @@ if(!(Test-Path $msbuildPath)){
 
 Write-Host "Using path: " $msbuildPath
 
-$root = [System.IO.Path]::GetDirectoryName($myInvocation.MyCommand.Definition)
-$root
-
 & $msbuildPath .\MyBestBooks\\MyBestBooks.sln
 if(!($?) -or $lastExitCode -ne 0){
     exit(1)
 }
+
+$SqlPackageLocation2 = "C:\jeevan\Softwares\sqlpackage-win7-x64-en-US-15.0.5084.2\sqlpackage.exe"
+$buildOutPutDacpacFilePath = .\\MyBestBooks\\BestBooks\\bin\\Debug\\BestBooks.dacpac
+& $SqlPackageLocation2 /action:Publish  /SourceFile:$buildOutPutDacpacFilePath /TargetDatabaseName:BestBooks /TargetServerName:”localhost” /tu:sa /tp:123 
+
+Write-Host "Successfully deployed"
