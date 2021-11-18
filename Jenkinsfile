@@ -34,16 +34,6 @@ pipeline {
                  powershell(script: "./BuildSolution.ps1")
             }
         }
-        stage('start container') {
-            agent {
-                label "linux-agent"
-            }
-            steps {
-                timeout(time: 20, unit: 'SECONDS') {
-                    StartContainer()
-                }
-            }
-        }
         stage('ps step'){
             steps{
                 powershell 'Write-Host "Hello Jeevan from PS"'
