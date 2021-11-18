@@ -6,7 +6,7 @@ $msbuildPath = "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Communit
 
 
 if(!(Test-Path ./nuget.exe)){
-   wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile ./nuget.exe
+   Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile ./nuget.exe
 }
 ./nuget install Microsoft.Data.Tools.Msbuild -o  $msBuildRootDir
 
